@@ -22,12 +22,24 @@ class SeatsIoViewFactory: NSObject, FlutterPlatformViewFactory{
         viewIdentifier viewId: Int64,
         arguments args: Any?
     ) -> FlutterPlatformView {
-        return SeatsIoView(
-            frame: frame,
-            viewIdentifier: viewId,
-            arguments: args as! Dictionary<String, AnyObject>,
-            binaryMessenger: messenger
-        )
+        if let argsDictionary = args as? Dictionary<String, AnyObject>{
+            return SeatsIoView(
+                frame: frame,
+                viewIdentifier: viewId,
+                arguments: argsDictionary,
+                binaryMessenger: messenger
+            )
+        }else{
+            return SeatsIoView(
+                frame: frame,
+                viewIdentifier: viewId,
+                arguments: [String:AnyObject](),
+                binaryMessenger: messenger
+            )
+        }
+    }
+    public func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
+        return FlutterStandardMessageCodec.sharedInstance()
     }
 }
 
