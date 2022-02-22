@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - JustBridge (4.2.0)
+  - seats_io_flutter (0.0.1):
+    - Flutter
+    - seatsio
+  - seatsio (12.4.0):
+    - JustBridge (~> 4.2.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - seats_io_flutter (from `.symlinks/plugins/seats_io_flutter/ios`)
+
+SPEC REPOS:
+  trunk:
+    - JustBridge
+    - seatsio
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  seats_io_flutter:
+    :path: ".symlinks/plugins/seats_io_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  JustBridge: 8bfee3a0a1fbe0570931975908aedad9688db75d
+  seats_io_flutter: 580ef204a5ffaf2f8e2b3bbb70b2fbe2e3b6d6a3
+  seatsio: afd36d92a71a175df3595dcc59d3118b4b2cbcbf
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.11.2
