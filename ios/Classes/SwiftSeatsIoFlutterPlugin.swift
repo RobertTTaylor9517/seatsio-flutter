@@ -6,7 +6,7 @@ public class SwiftSeatsIoFlutterPlugin: NSObject, FlutterPlugin {
     let channel = FlutterMethodChannel(name: "seats_io_flutter", binaryMessenger: registrar.messenger())
     let instance = SwiftSeatsIoFlutterPlugin()
     let factory = SeatsIoViewFactory(messenger: registrar.messenger())
-    registrar.register(factory, withId: "seats-io-flutter")
+    registrar.register(factory, withId: "seats-io-view")
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
