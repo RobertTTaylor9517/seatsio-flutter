@@ -23,7 +23,10 @@ class _SeatsIoFlutterState extends State<SeatsIoFlutter>{
   Widget build(BuildContext context) {
 
     const String viewType = 'seats-io-view';
-    const Map<String, dynamic> creationParams = <String, dynamic>{};
+    Map<String, dynamic> creationParams = <String, dynamic>{
+      "eventId": widget.eventId,
+      "publicKey": widget.publicKey
+    };
 
     switch(defaultTargetPlatform){
       case TargetPlatform.android:
